@@ -108,7 +108,7 @@ get_name(Pid, Names) ->
         [] ->
             {initial_call, {Mod, _, _}} = process_info(Pid, initial_call),
             Mod;
-        Registered ->
+        {registered_name, Registered} ->
             Registered
     end,
     Names2 = dict:update_counter(Name, 1, Names),

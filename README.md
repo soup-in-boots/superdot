@@ -8,7 +8,7 @@ Erlang/OTP 17 [erts-6.3] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [
 
 Eshell V6.3  (abort with ^G)
 (juno@diogenes)1> Graph = superdot:graph(kernel_sup).
-{graph,{registered_name,kernel_sup},
+{graph,kernel_sup,
        normal,
        [{graph,kernel_safe_sup,simple,[{node,"unknown"}]},
         {node,kernel_config},
@@ -23,7 +23,7 @@ Eshell V6.3  (abort with ^G)
         {node,global_name_server},
         {node,rex}]}
 (juno@diogenes)2> String = superdot:to_dot(Graph).
-<<"digraph registered_name_kernel_sup{\nregistered_name_kernel_sup [shape=box,style=filled,fillcolor=\"#ffcccc\"];\nsubgrap"...>>
+<<"digraph kernel_sup{\nkernel_sup [shape=box,style=filled,fillcolor=\"#ffcccc\"];\nsubgrap"...>>
 (juno@diogenes)3> file:write_file("/tmp/test.dot", String).
 ok
 ```
