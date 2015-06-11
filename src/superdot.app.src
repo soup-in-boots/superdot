@@ -1,0 +1,14 @@
+{application, superdot,
+ [
+  {description, "An Erlang superdot library"},
+  {vsn, "1"},
+  {modules, [
+             superdot
+            ]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
